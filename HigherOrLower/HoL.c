@@ -12,7 +12,7 @@ long randomNumber(char *x)
         unsigned int hard;
     } dif;
 
-    unsigned int seed;
+    long int seed;
     srand(time(&seed));
     dif level;
 
@@ -58,7 +58,7 @@ int highOrLow(unsigned long x)
 int main(void)
 {
     char userInput[7];
-    printf("Please choose a difficulty, easy, medium, or hard.\n");
+    printf("Please choose a difficulty, easy(255), medium(65355), or hard(4294967295).\n");
     scanf("%s", &userInput);
     unsigned long rNum = randomNumber(userInput);
 
