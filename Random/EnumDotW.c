@@ -27,16 +27,16 @@ int main() {
     WeekDay_E today = 0;
     WeekDay_E tomorrow = 1;
     
-    for(int i = 0; i < 14; i++) {
+    for(int i = 0; i < 30; i++) {
         char day[10]; 
         strcpy(day, findDay(today));
         printf("Today is %s\n", day);
         
-        if(tomorrow < Sunday && today < Sunday) {
+        if(today <= Sunday) {
             today = tomorrow;
-            tomorrow = today + 1; 
-        } else {
-            tomorrow = Monday;
+            tomorrow++;
+            if(tomorrow > Sunday)
+                tomorrow = Monday;
         }
     }
     return 0;
