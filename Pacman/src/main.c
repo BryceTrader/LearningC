@@ -2,6 +2,5 @@
 
 int main()
 {
-    printf("reee\n");
     return 0;
 }
